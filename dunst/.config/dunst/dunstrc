@@ -1,6 +1,8 @@
 [global]
-    font = Roboto 14
-
+    font = Roboto 12
+    
+    min_icon_size = 0
+    max_icon_size = 150
     # allow a small subset of html markup:
     # <b>bold</b>
     # <i>italic</i>
@@ -9,7 +11,7 @@
     #
     # for a complete reference see http://developer.gnome.org/pango/stable/PangoMarkupFormat.html
     # If markup is not allowed, those tags will be stripped out of the message.
-    allow_markup = yes
+    markup = yes
 
     # The format of the message. Possible variables are:
     #   %a  appname
@@ -19,7 +21,7 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-    format = "<b>%a:</b> %s\n%I %b"
+    format = "<b>%s</b>\n%b"
 
     # Sort messages by urgency
     sort = yes
@@ -59,7 +61,7 @@
     # right side of the screen.  Y is measured from the top and down respectevly.
     # The width can be negative. In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x10-30+30"
+    geometry = "400x10-30+30"
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
@@ -118,19 +120,20 @@
     startup_notification = false
     title = Dunst
     class = Dunst
-    mouse_left_click = close_current
+    mouse_left_click = do_action
     mouse_middle_click = close_all
-    mouse_right_clic = do_action
+    mouse_right_clic = close_current
 
     # dmenu path
     dmenu = /usr/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
     browser = /usr/bin/firefox -new-tab
-
-[frame]
-    width = 4 
-    color = "#a7c084"
+    
+    icon_position = left
+    icon_path = /usr/share/icons/Numix/64/status:/usr/share/icons/Numix/64/devices
+    frame_width = 4 
+    frame_color = "#a7c084"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -158,9 +161,8 @@
     timeout = 10
 
 [urgency_normal]
-    background = "#a7c084"
-    foreground = "#000000"
-    # icon = 
+    background = "#323d43"
+    foreground = "#ffffff"
     timeout = 20
 
 [urgency_critical]
@@ -194,6 +196,10 @@
 #[script-test]
 #    summary = "*script*"
 #    script = dunst_test.sh
+
+[firefox-downloaded]
+    summary = "*"
+    script = ~/.config/dunst/show-downloads.bash
 
 #[ignore]
 ## This notification will not be displayed
