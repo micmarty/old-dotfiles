@@ -22,6 +22,10 @@ pgrep bspswallow || ~/.config/bspwm/bspswallow &
 # FontAwesome (polybar)
 # ~/.Xmodmap
 # xdotool
+#sudo add-apt-repository ppa:numix/ppa
+#sudo apt update
+#sudo apt install numix-icon-theme-circleA
+# svg w rangerzzze imagemagick
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 

@@ -1,0 +1,5 @@
+sudo apt install \
+zsh \
+nitrogen \
+dunst \
+
