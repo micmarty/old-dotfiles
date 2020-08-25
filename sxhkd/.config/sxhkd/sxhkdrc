@@ -23,7 +23,7 @@ mode_switch + {1,2,3,4}
 	bspc desktop -f {I,II,III,IV}
 	
 mode_switch + d
-	bspc rule -a Alacritty -o state=floating rectangle=800x500+700+100 sticky=on && alacritty -e ranger ~/Downloads
+	bspc rule -a Alacritty -o state=floating rectangle=900x500+500+200 sticky=on && alacritty -e ranger ~/Downloads
 
 # quit/restart bspwm
 super + alt + {q,r}
