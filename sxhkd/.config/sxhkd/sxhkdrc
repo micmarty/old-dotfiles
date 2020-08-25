@@ -22,7 +22,7 @@ super + Escape
 mode_switch + {1,2,3,4}
 	bspc desktop -f {I,II,III,IV}
 	
-super + r
+mode_switch + d
 	bspc rule -a Alacritty -o state=floating rectangle=800x500+700+100 sticky=on && alacritty -e ranger ~/Downloads
 
 # quit/restart bspwm
@@ -36,6 +36,7 @@ mode_switch + {_,shift + }q
 # alternate between the tiled and monocle layout
 mode_switch + m
 	bspc desktop -l next
+
 
 # send the newest marked node to the newest preselected node
 super + y
