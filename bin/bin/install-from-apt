@@ -3,4 +3,5 @@ zsh \
 nitrogen \
 dunst \
 rofi \
-xtrlock
+xtrlock \
+flameshot
