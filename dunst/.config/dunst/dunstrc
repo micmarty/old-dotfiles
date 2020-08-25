@@ -198,7 +198,8 @@
 #    script = dunst_test.sh
 
 [firefox-downloaded]
-    summary = "*"
+    appname = Firefox
+    summary = "*Download Complete*"
     script = ~/.config/dunst/show-downloads.bash
 
 #[ignore]
