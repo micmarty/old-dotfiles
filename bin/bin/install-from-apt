@@ -4,4 +4,5 @@ nitrogen \
 dunst \
 rofi \
 xtrlock \
-flameshot
+flameshot \
+htop
