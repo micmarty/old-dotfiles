@@ -63,9 +63,13 @@ stowit() {
     (cd ~/dotfiles; stow -v -R -t ~ ${app})
 }
 alias z='nvim "+normal G" ~/.zshrc'
-alias r='source ~/.zshrc'
+alias cr='(ranger ~/.config ~/dotfiles)'
+alias rr='source ~/.zshrc'
+
+alias c='(cd ~/dotfiles; lazygit)'
+alias r='ranger .'
+
 alias i='sudo apt install'
 alias u='sudo apt update'
 alias g='lazygit'
-alias c='(cd ~/dotfiles; lazygit)'
 alias v='nvim'
