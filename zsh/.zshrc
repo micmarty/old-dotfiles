@@ -48,7 +48,7 @@ source ~/bin/vi-mode-cursor.zsh
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-histor
+bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 export KEYTIMEOUT=50
