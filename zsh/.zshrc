@@ -35,12 +35,14 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export ZSH_DISABLE_COMPFIX=true
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-  export VISUAL='nvim'
+  export EDITOR=nvim
 else
-  export EDITOR='vim'
+  export EDITOR=vim
+  export VISUAL=nvim
+  export BROWSER=firefox
 fi
 
 # vi mode
@@ -69,7 +71,14 @@ alias rr='source ~/.zshrc'
 alias c='(cd ~/dotfiles; lazygit)'
 alias r='ranger .'
 
+alias s='sudo'
 alias i='sudo apt install'
 alias u='sudo apt update'
 alias g='lazygit'
 alias v='nvim'
+
+alias cat='batcat'
+alias cp='cp --interactive --verbose --preserve=mode,ownership,timestamps'
+alias mkdir='mkdir --verbose --parents'
+alias mv='mv -vi'
+alias rm='rm -vI'
