@@ -1,8 +1,17 @@
 sudo apt install \
+stow \
+bspwm \
 zsh \
 nitrogen \
+polybar \
 dunst \
 rofi \
 xtrlock \
 flameshot \
-htop
+htop \
+bat \
+mpv 
+
+sudo add-apt-repository ppa:numix/ppa
+sudo apt updatfirae
+sudo apt install numix-icon-theme-circle
