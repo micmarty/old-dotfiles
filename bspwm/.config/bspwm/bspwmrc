@@ -6,7 +6,8 @@ xsetroot -cursor_name left_ptr
 xset r rate 190 60
 
 # Startup
-pkill compton; compton --backend glx --no-fading-openclose --vsync --sw-opti &
+pkill compton
+compton --backend glx --no-fading-openclose --vsync --sw-opti &
 nitrogen --set-scaled ~/Pictures/stag.png
 pkill dunst; dunst &
 /home/$USER/.config/polybar/launch.sh
@@ -27,6 +28,7 @@ pgrep bspswallow || ~/.config/bspwm/bspswallow &
 #sudo apt update
 #sudo apt install numix-icon-theme-circleA
 # svg w rangerzzze imagemagick
+# vscode zeby dzialal prawy alt "keyboard.dispatch":"keyCode"
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
