@@ -1,5 +1,5 @@
-# Vim bindings
-export PATH=$HOME/bin::$PATH
+# my scripts and binaries
+export PATH=$HOME/bin:$PATH
 export ZSH="/home/miczi/.oh-my-zsh"
 ZSH_THEME="avit"
 
@@ -38,9 +38,9 @@ export ZSH_DISABLE_COMPFIX=true
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR=nvim
-else
   export EDITOR=vim
+else
+  export EDITOR=nvim
   export VISUAL=nvim
   export BROWSER=firefox
 fi
@@ -55,6 +55,9 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 export KEYTIMEOUT=50
 
+# miniconda
+source ~/bin/conda-init.zsh
+
 # functions
 stowit() {
     # usr=$1
@@ -64,6 +67,8 @@ stowit() {
     # -t target
     (cd ~/dotfiles; stow -v -R -t ~ ${app})
 }
+
+
 alias z='nvim "+normal G" ~/.zshrc'
 alias cr='(ranger ~/.config ~/dotfiles)'
 alias rr='source ~/.zshrc'
@@ -82,3 +87,5 @@ alias cp='cp --interactive --verbose --preserve=mode,ownership,timestamps'
 alias mkdir='mkdir --verbose --parents'
 alias mv='mv -vi'
 alias rm='rm -vI'
+
+
