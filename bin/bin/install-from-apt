@@ -10,7 +10,8 @@ xtrlock \
 flameshot \
 htop \
 bat \
-mpv 
+mpv \
+thunderbird
 
 sudo add-apt-repository ppa:numix/ppa
 sudo apt updatfirae
