@@ -11,7 +11,19 @@ flameshot \
 htop \
 bat \
 mpv \
-thunderbird
+thunderbird \
+ffmpegthumbnailer
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+  --directory-prefix /tmp
+chmod +x /tmp/Miniconda3-latest-Linux-x86_64.sh
+# Silent mode + update
+/tmp/Miniconda3-latest-Linux-x86_64.sh -b -u
+# Already in .zshrc and .bashrc
+# ~/miniconda3/bin/conda init bash
+# ~/miniconda3/bin/conda init zsh
+
+pip install ueberzug
 
 sudo add-apt-repository ppa:numix/ppa
 sudo apt updatfirae
@@ -19,3 +31,4 @@ sudo apt install numix-icon-theme-circle
 
 mkdir -p ~/.local/bin
 ln -s /usr/bin/batcat ~/bin/bat
+
