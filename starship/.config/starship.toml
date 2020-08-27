@@ -1,0 +1,12 @@
+[conda]
+symbol = "env: " 
+
+[directory]
+truncation_length = 5
+
+[git_branch]
+symbol = "🌱 "
+
+[git_state]
+progress_divider = " of "
+cherry_pick = "🍒 PICKING"
