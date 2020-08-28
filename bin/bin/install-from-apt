@@ -12,7 +12,8 @@ htop \
 bat \
 mpv \
 thunderbird \
-ffmpegthumbnailer
+ffmpegthumbnailer \
+atool
 
 # starship
 curl -fsSL https://starship.rs/install.sh | bash
