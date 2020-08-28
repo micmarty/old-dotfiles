@@ -74,6 +74,7 @@ alias i='sudo apt install'
 alias u='sudo apt update'
 alias g='lazygit'
 alias v='nvim'
+alias vc='nvim ~/.config'
 
 alias cat='batcat'
 alias cp='cp --interactive --verbose --preserve=mode,ownership,timestamps'
