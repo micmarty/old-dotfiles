@@ -37,6 +37,8 @@ mode_switch + {_,shift + }q
 mode_switch + m
 	bspc desktop -l next
 
+mode_switch + v
+  $EDITOR ~/.config
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -55,7 +57,7 @@ XF86Audio{Lower,Raise}Volume
 alt + @space
 	~/.config/bspwm/scratchpad dropdown
 
-alt + d
+mode_switch + f
 	rofi -show drun
 	
 super + bracketleft
@@ -117,7 +119,7 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-mode_switch + F{1-9,0}
+mode_switch + F{1-9,10}
 	bspc node -d '^{1-9,10}'
 
 
