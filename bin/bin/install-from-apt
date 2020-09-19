@@ -13,7 +13,10 @@ bat \
 mpv \
 thunderbird \
 ffmpegthumbnailer \
-atool
+atool \
+# clipmenu
+xsel \
+libxfixes-dev
 
 # starship
 curl -fsSL https://starship.rs/install.sh | bash
