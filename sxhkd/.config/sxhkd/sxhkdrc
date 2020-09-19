@@ -38,7 +38,7 @@ mode_switch + m
 	bspc desktop -l next
 
 mode_switch + v
-  $EDITOR ~/.config
+  CM_LAUNCHER=rofi clipmenu
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -71,6 +71,9 @@ super + bracketleft
 
 mode_switch + {minus,equal}
 	bspc node @/ -C {backward,forward} 
+
+mode_switch + i
+	bolt --rofi-search
 
 super + bracketleft
 	rofi -show drun
