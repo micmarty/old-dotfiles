@@ -14,6 +14,9 @@ mpv \
 thunderbird \
 ffmpegthumbnailer \
 atool \
+cowsay \
+figlet \
+lolcat \
 # clipmenu
 xsel \
 libxfixes-dev \
