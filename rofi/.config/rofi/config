@@ -11,5 +11,5 @@ rofi.bw: 0
 rofi.opacity: 85
 rofi.display-window: Window
 rofi.display-drun: Search
-rofi.kb-row-up: Alt+k
-rofi.kb-row-down: Alt+j
+rofi.kb-row-up: Up,Alt+k
+rofi.kb-row-down: Down,Alt+j
