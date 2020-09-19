@@ -34,6 +34,7 @@ else
   export EDITOR=nvim
   export VISUAL=nvim
   export BROWSER=firefox
+  export EXPLORER=ranger
 fi
 
 # vi mode
@@ -48,6 +49,11 @@ export KEYTIMEOUT=50
 
 # miniconda
 source ~/bin/conda-init.zsh
+
+# clipmenu
+export CM_LAUNCHER=rofi
+export CM_SELECTIONS='clipboard primary'
+export CM_IGNORE_WINDOW='' # e.g keypass
 
 # prompt
 eval "$(starship init zsh)"
