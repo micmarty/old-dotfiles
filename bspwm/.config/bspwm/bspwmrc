@@ -13,6 +13,7 @@ pgrep clipmenud || ~/bin/clipmenud &
 pkill dunst; dunst &
 /home/$USER/.config/polybar/launch.sh
 pgrep bspswallow || ~/.config/bspwm/bspswallow &
+~/bin/bolt --generate
 # polybar wm-restack = bspwm
 # chmod weather launch etc
 # chmod pulseaudio-control,bash
