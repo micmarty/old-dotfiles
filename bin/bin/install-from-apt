@@ -16,7 +16,9 @@ ffmpegthumbnailer \
 atool \
 # clipmenu
 xsel \
-libxfixes-dev
+libxfixes-dev \
+# bolt
+fzf
 
 # starship
 curl -fsSL https://starship.rs/install.sh | bash
