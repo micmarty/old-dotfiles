@@ -13,4 +13,3 @@ rofi.display-window: Window
 rofi.display-drun: Search
 rofi.kb-row-up: Alt+k
 rofi.kb-row-down: Alt+j
-rofi.kb-accept-entry: Alt+l
