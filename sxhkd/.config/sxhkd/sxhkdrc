@@ -12,8 +12,20 @@ alt + p
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
 
+# Show help
+mode_switch + slash
+    sxhkd-help
+
+alt + v
+    CM_LAUNCHER=rofi clipmenu \
+        -location 1 \
+        -m -3 \
+        -no-show-icons \
+        -theme-str '* \{ font: 10px; \}' \
+        -theme-str 'listview \{ spacing: 0; \}' \
+        -theme-str 'window \{ width: 20em; \}'
 #
 # bspwm hotkeys
 #
@@ -21,7 +33,7 @@ super + Escape
 # miczi
 mode_switch + {1,2,3,4}
 	bspc desktop -f {I,II,III,IV}
-	
+
 mode_switch + d
 	bspc rule -a Alacritty -o state=floating rectangle=900x500+500+200 sticky=on && alacritty -e ranger ~/Downloads
 
@@ -38,7 +50,7 @@ mode_switch + m
 	bspc desktop -l next
 
 mode_switch + v
-  CM_LAUNCHER=rofi clipmenu
+	CM_LAUNCHER=rofi clipmenu
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -59,7 +71,7 @@ alt + @space
 
 mode_switch + f
 	rofi -show drun
-	
+
 super + bracketleft
 	rofi -show window -kb-row-up "super+bracketleft" -kb-row-down "super+bracketright" -kb-accept-entry "super+semicolon"
 
@@ -70,7 +82,7 @@ super + bracketleft
 	# -kb-row-down "Alt+Tab" \b
 
 mode_switch + {minus,equal}
-	bspc node @/ -C {backward,forward} 
+	bspc node @/ -C {backward,forward}
 
 mode_switch + i
 	bolt --rofi-search
@@ -132,8 +144,7 @@ mode_switch + F{1-9,10}
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
+	bspc node -p {west,south,north,east} 
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -164,4 +175,19 @@ super + {Left,Down,Up,Right}
 
 Print
 	flameshot gui --path ~/Pictures
-	
+
+
+
+# Close/lock screen
+
+# Closing the screen just makes the display go blank, while locking it actually brings up the lock screen (betterlockscreen in my case).
+# Extremely important at work - locking up the screen when leaving desk.
+# Requires xset (for closing the screen) & betterlockscreen
+# Close screen
+super + shift + c
+    sleep 0.5; xset dpms force standby
+
+# Lock screen
+super + shift + x
+    betterlockscreen -l dim -t ''
+j
