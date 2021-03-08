@@ -1,5 +1,5 @@
 # my scripts and binaries
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH
 export ZSH="/home/miczi/.oh-my-zsh"
 ZSH_THEME="avit"
 CASE_SENSITIVE="true"
@@ -69,13 +69,14 @@ stowit() {
 }
 
 alias z='nvim "+normal G" ~/.zshrc'
+alias b='nvim ~/.config/bspwm/bspwmrc'
+alias s='nvim ~/.config/sxhkd/sxhkdrc'
 alias cr='(ranger ~/.config ~/dotfiles)'
 alias rr='source ~/.zshrc'
 
 alias c='(cd ~/dotfiles; lazygit)'
 alias r='ranger .'
 
-alias s='sudo'
 alias i='sudo apt install'
 alias u='sudo apt update'
 alias g='lazygit'
@@ -89,5 +90,6 @@ alias cp='cp --interactive --verbose --preserve=mode,ownership,timestamps'
 alias mkdir='mkdir --verbose --parents'
 alias mv='mv -vi'
 alias rm='rm -vI'
+alias xmi='scrcpy --serial 336acdd50404 --show-touches'
 
-
+#cowsay konfiguracja fasd w zsh itd.
