@@ -1,22 +1,38 @@
 #! /bin/sh
+
+# Install
+# gawk wmctrl redshift tdrop
+
+# Key binding
 sxhkd &
 
 # X
 xsetroot -cursor_name left_ptr
+
+# Key repeat and delay
 xset r rate 190 60
 
 # Startup
 pkill compton
+pkill redshift
+
+redshift &
 compton --backend glx --no-fading-openclose --vsync --sw-opti &
 nitrogen --set-scaled ~/Pictures/stag.png
+
 pgrep clipmenud || ~/bin/clipmenud &
+# Notifications
 pkill dunst; dunst &
+# Taskbar
 /home/$USER/.config/polybar/launch.sh
+
+# bspwm extensions
 pgrep bspswallow || ~/.config/bspwm/bspswallow &
 ~/bin/bolt --generate
 
 # Fix for JetBrains IDE (PyCharm, IntelliJ)
 wmname LG3D
+# Programs startup
 # polybar wm-restack = bspwm
 # chmod weather launch etc
 # chmod pulseaudio-control,bash
@@ -55,18 +71,19 @@ bspc config gapless_monocle      true
 # bspc config click_to_focus       true
 bspc config focus_follows_pointer   true
 
-bspc config normal_border_color		      "#4c566a"
-bspc config active_border_color	          "#1e1e1e"
-bspc config focused_border_color	      "#5e81ac"
-bspc config presel_feedback_color	      "#5e81ac"
-bspc config urgent_border_color 	      "#dd2727"
+bspc config normal_border_color		"#4c566a"
+bspc config active_border_color 	"#1e1e1e"
+bspc config focused_border_color	"#5e81ac"
+bspc config presel_feedback_color	"#5e81ac"
+bspc config urgent_border_color		"#dd2727"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
-bspc rule -a Firefox desktop=I state=fullscreen center=true focus=on
+bspc rule -a Screenkey floating=on manage=off
+bspc rule -a Firefox desktop=I center=true state=fullscreen
+bspc rule -a jetbrains-idea-ce desktop=II state=fullscreen center=true
 
 # bspc rule -a Toolkit:Firefox -o state=floating rectangle=800x500+700+100 sticky=on
 bspc config external_rules_command ~/.config/bspwm/external-rules.bash

@@ -3,8 +3,15 @@
 #
 
 # terminal emulator
-super + Return
+mode_switch + minus
 	alacritty
+
+mode_switch + equal
+	toggle-dropdown-terminal
+# toggle-dropdown-terminal
+#bspc rule -a Alacritty -o state=floating rectangle=1900x200+0+870 sticky=on && alacritty
+
+
 
 # program launcher
 alt + p
@@ -13,7 +20,7 @@ alt + p
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
-
+# pkill -USR1 redshift
 # Show help
 mode_switch + slash
     sxhkd-help
@@ -144,7 +151,7 @@ mode_switch + F{1-9,10}
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east} 
+	bspc node -p {west,south,north,east}
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -190,4 +197,8 @@ super + shift + c
 # Lock screen
 super + shift + x
     betterlockscreen -l dim -t ''
-j
+
+# TODO organize them
+#+ refresh all windows
+super + shift + b
+    xrefresh
